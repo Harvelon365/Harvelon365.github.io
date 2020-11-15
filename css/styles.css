@@ -127,6 +127,17 @@ nav img{
     .landing{
         flex-direction: column;
     }
+
+    .tile{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 2fr 2fr 0.5fr;
+        grid-template-areas: 
+        "title"
+        "para"
+        "img"
+        "link";
+    }
 }
 
 
