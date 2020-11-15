@@ -172,7 +172,7 @@ nav img{
 .tile li a{
     color: white;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 16px;
 }
 main{
