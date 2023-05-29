@@ -95,10 +95,6 @@ a {
     --bg-h: 100%
 }
 
-a:hover {
-    color: black;
-    transition: background-size 350ms;
-}
 
 a:where(:hover, :focus-visible){
     color: black!important;
