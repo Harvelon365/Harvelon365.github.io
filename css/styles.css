@@ -96,7 +96,7 @@ a {
 }
 
 a:where(:hover, :focus-visible){
-    color: black;
+    color: black!important;
     background-size: 100% var(--bg-h);
     background-position-x: left;
 }
