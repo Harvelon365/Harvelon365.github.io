@@ -88,28 +88,17 @@ nav img{
     margin: 80px;
 }
 
-.hover-underline-animation{
-    display: inline-block;
-    position: relative;
+a {
+    background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
     color: white;
+    transition: background-size 350ms;
+    --bg-h: 100%
 }
 
-.hover-underline-animation::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: center right;
-    transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation::after{
-    transform: scaleX(1);
-    transform-origin: center left;
+a:where(:hover, :focus-visible){
+    color: black;
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
 }
 
 @media screen and (max-width: 768px){
