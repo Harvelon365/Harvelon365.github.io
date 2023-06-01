@@ -9,6 +9,32 @@ body{
     margin: 0;
 }
 
+footer{
+    height: 10vh;
+    background: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+}
+
+.foot-links{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    float: left;
+    margin-left: 1.5%;
+}
+
+.foot-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
 nav{
     height: 10vh;
     background: black;
@@ -33,6 +59,7 @@ nav img{
     justify-content: space-around;
     align-items: center;
     float: right;
+    margin-right: 1.5%;
 }
 
 .nav-links li a{

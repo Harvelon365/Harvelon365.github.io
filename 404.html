@@ -7,36 +7,45 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
-        <title>404: not found</title>
+        <title>404 - Not Found</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.webp">
     </head>
     <body>
         <nav>
-            <a href="index.html"><img src="images/logo.jpg" alt="Harvelon365"></a>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+            <a href="index.html"><img class="corner-logo" src="images/logo.webp" alt="Harvey Tucker"></a>
             <ul class="nav-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="404.html">About</a></li>
+                <div style="width: 25px;"></div>
+                <li><a href="404.html">Projects</a></li>
+                <div style="width: 25px;"></div>
+                <li><a href="404.html">Contact</a></li>
+                <div style="width: 25px;"></div>
             </ul>
         </nav>
 
-        <section class="landing">
-            <h1>Oops!</h1>
-            <h3>There appears to be nothing here!</h3>
-            <br>
-            <h4>Why not check out our actual pages:</h4>
-            <br>
-            <ul class="suggest-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </section>
+        <div class="landing">
+            <div class="top-text-container">
+                <span class="text first-text">Error 404: Page not found<br></span>
+                <span class="text first-text" style="color: #a323b0!important">Looks like you might be lost.</span>
+                <p id="startParagraph">Maybe try using of the links at the top of the page.</p>
+                <p>Or you can just sit here in peace.</p>
+            </div>
+            <div class="top-image-container">
+                <img class="portrait-photo" src="images/404image.webp" alt="Lost robot">
+            </div>
+        </div>
 
         <script src="js/main.js"></script>
+
+        <footer>
+            <ul class="foot-links">
+                <li><a href="404.html">Instagram</a></li>
+                <div style="width: 25px;"></div>
+                <li><a href="404.html">Itch.io</a></li>
+                <div style="width: 25px;"></div>
+                <li><a href="404.html">Me</a></li>
+                <div style="width: 25px;"></div>
+            </ul>
+        </footer>
     </body>
 </html>
