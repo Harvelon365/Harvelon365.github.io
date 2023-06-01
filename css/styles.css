@@ -1,5 +1,4 @@
 *{
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -7,6 +6,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    margin: 0;
 }
 
 nav{
@@ -15,29 +15,45 @@ nav{
     position: absolute;
     top: 0;
     width: 100%;
-    left: 0
+    left: 0;
+    overflow: hidden;
 }
 
 nav img{
-    height: 8vh;
-    margin: 1vh;
+    height: 8%;
+    margin: 2vh;
     position: fixed;
+    z-index: 1;
 }
 
 .nav-links{
     display: flex;
     list-style: none;
-    width: 30%;
     height: 100%;
     justify-content: space-around;
     align-items: center;
-    margin-left: auto;
+    float: right;
 }
 
 .nav-links li a{
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+
+li a {
+    background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
+    color: white;
+    transition: background-size 350ms, color 350ms;
+    --bg-h: 100%;
+    padding: 10px;
+}
+
+
+li a:where(:hover, :focus-visible){
+    color: black!important;
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
 }
 
 .corner-logo:hover{
@@ -54,21 +70,33 @@ nav img{
     background-blend-mode: multiply;
     background-position: center;
     width: 100%;
+    overflow: auto;
 }
 
-.container{
-    margin-top: 10vh;
-    width: 100%;
+#startParagraph{
+    margin-top: 10%;
+}
+
+.top-text-container{
+    margin-top: 5%;
+    width: 50%;
     overflow: hidden;
+    float: left;
 }
 
-.container .text{
+.top-text-container p{
+    margin-bottom: 5%;
+    color: white;
+    font-size: 20px;
+}
+
+.top-text-container .text{
     position: relative;
     font-size: 75px;
     font-weight: 600;
 }
 
-.container .text.first-text{
+.top-text-container .text.first-text{
     color: white;
 }
 
@@ -76,7 +104,7 @@ nav img{
     color: #a323b0;
 }
 
-.text.text.sec-text::before{
+.text.sec-text::before{
     content: "";
     position: absolute;
     top: 0;
@@ -97,6 +125,32 @@ nav img{
     }
 }
 
+.top-image-container{
+    background-color: #a323b0;
+    position: relative;
+    width: 40%;
+    float: right;
+}
+
+@media screen and (max-width: 1050px)
+{
+    .top-image-container{
+        float: none;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .top-text-container{
+        float: none;
+        width: 100%;
+    }
+}
+
+.portrait-photo{
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+}
+
 
 .landing h1{
     margin: 40px;
@@ -111,21 +165,6 @@ nav img{
 
 .landing ul li{
     margin: 80px;
-}
-
-li a {
-    background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
-    color: white;
-    transition: background-size 350ms, color 350ms;
-    --bg-h: 100%;
-    padding: 10px;
-}
-
-
-li a:where(:hover, :focus-visible){
-    color: black!important;
-    background-size: 100% var(--bg-h);
-    background-position-x: left;
 }
 
 .tile{

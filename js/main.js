@@ -11,7 +11,7 @@ const textload = () => {
         text.textContent = "a programmer."
     }, 8000);
     setTimeout(() => {
-        text.textContent = "a trekkie"
+        text.textContent = "a legend."
     }, 12000);
 }
 
