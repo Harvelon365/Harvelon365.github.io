@@ -6,13 +6,13 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    
+    font-weight: bold;
 }
 
 nav{
     height: 10vh;
     background: #333;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     left: 0
@@ -40,22 +40,6 @@ nav img{
     font-size: 16px;
 }
 
-.suggest-links{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    width: 30%;
-    height: 50%;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.suggest-links li a{
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-}
 
 .landing{
     margin-top: 10vh;
@@ -68,6 +52,7 @@ nav img{
     background-color: darkgray;
     background-blend-mode: multiply;
     background-position: center;
+    width: 100%;
 }
 
 .landing h1{
@@ -88,75 +73,20 @@ nav img{
     margin: 80px;
 }
 
-a {
+li a {
     background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
     color: white;
-    transition: background-size 350ms;
-    --bg-h: 100%
+    transition: background-size 350ms, color 350ms;
+    --bg-h: 100%;
+    padding: 10px;
 }
 
 
-a:where(:hover, :focus-visible){
+li a:where(:hover, :focus-visible){
     color: black!important;
     background-size: 100% var(--bg-h);
     background-position-x: left;
 }
-
-@media screen and (max-width: 768px){
-
-    .line{
-        width: 30px;
-        height: 3px;
-        background: white;
-        margin: 5px;
-    }
-
-    .hamburger{
-        position: absolute;
-        cursor: pointer;
-        right: 5%;
-        top: 50%;
-        transform: translate(-5%, -50%);
-        z-index: 2;
-    }
-
-    .nav-links{
-        position: fixed;
-        background: #333;
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        clip-path: circle(100px at 90% -20%);
-        -webkit-clip-path: circle(100px at 90% -20%);
-        transition: all 1s ease-out;
-        pointer-events: none;
-    }
-
-    .nav-links.open{
-        clip-path: circle(1200px at 90% -10%);
-        -webkit-clip-path: circle(1200px at 90% -10%);
-        pointer-events: all;
-    }
-
-    .landing{
-        flex-direction: column;
-    }
-
-    .tile{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 2fr 2fr 0.5fr;
-        grid-template-areas: 
-        "title"
-        "para"
-        "img"
-        "link";
-    }
-}
-
-
-
-
 
 .tile{
     display: grid;
