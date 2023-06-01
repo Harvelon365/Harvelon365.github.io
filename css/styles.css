@@ -113,10 +113,24 @@ li a:where(:hover, :focus-visible){
     width: 100%;
     background-color: black;
     border-left: 4px solid #a323b0;
-    animation: typewriter 4s steps(12) infinite;
+    animation: typewriterDesktop 4s steps(12) infinite;
 }
 
-@keyframes typewriter{
+@media screen and (max-width: 1050px){
+    .text.sec-text::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        border-left: 4px solid #a323b0;
+        animation: typewriterMobile 4s steps(12) infinite;
+    }
+}
+
+@keyframes typewriterDesktop{
     40%, 60%{
         left: calc(100% + 4px);
     }
@@ -124,6 +138,16 @@ li a:where(:hover, :focus-visible){
         left: 0%;
     }
 }
+
+@keyframes typewriterMobile{
+    0%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: calc(100% + 4px);
+    }
+}
+
 
 .top-image-container{
     background-color: #a323b0;
