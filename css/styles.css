@@ -40,31 +40,72 @@ nav img{
     font-size: 16px;
 }
 
+.corner-logo:hover{
+    rotate: 360deg;
+    transition: all 350ms;
+}
+
 
 .landing{
     margin-top: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 2.5%;
     background-size: cover;
-    background-color: #5a5a5a;
+    background-color: black;
     background-blend-mode: multiply;
     background-position: center;
     width: 100%;
 }
 
-.landing h1{
-    margin: 50px;
-    font-size: 50px;
+.container{
+    margin-top: 10vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .text{
+    position: relative;
+    font-size: 75px;
+    font-weight: 600;
+}
+
+.container .text.first-text{
     color: white;
+}
+
+.text.sec-text{
+    color: #a323b0;
+}
+
+.text.text.sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 4px solid #a323b0;
+    animation: typewriter 4s steps(12) infinite;
+}
+
+@keyframes typewriter{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+
+.landing h1{
+    margin: 40px;
+    font-size: 50px;
 }
 .landing h3{
-    color: white;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .landing h4{
-    color: white;
     margin-bottom: 3px;
 }
 
