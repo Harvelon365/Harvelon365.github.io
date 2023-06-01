@@ -11,7 +11,7 @@ body{
 
 nav{
     height: 10vh;
-    background: #333;
+    background: black;
     position: absolute;
     top: 0;
     width: 100%;
@@ -21,7 +21,7 @@ nav{
 nav img{
     height: 8vh;
     margin: 1vh;
-    position: absolute;
+    position: fixed;
 }
 
 .nav-links{
@@ -47,9 +47,8 @@ nav img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('../images/code.png');
     background-size: cover;
-    background-color: darkgray;
+    background-color: #5a5a5a;
     background-blend-mode: multiply;
     background-position: center;
     width: 100%;
