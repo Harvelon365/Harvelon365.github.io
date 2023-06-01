@@ -14,5 +14,6 @@ const textload = () => {
         text.textContent = "a trekkie"
     }, 12000);
 }
+
 textload();
 setInterval(textload, 16000);

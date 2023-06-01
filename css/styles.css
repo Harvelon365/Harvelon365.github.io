@@ -75,18 +75,17 @@ nav img{
 .text.sec-text{
     color: #a323b0;
 }
-@media screen and (min-width: 700px){
-    .text.text.sec-text::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        border-left: 4px solid #a323b0;
-        animation: typewriter 4s steps(12) infinite;
-    }
+
+.text.text.sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 4px solid #a323b0;
+    animation: typewriter 4s steps(12) infinite;
 }
 
 @keyframes typewriter{
