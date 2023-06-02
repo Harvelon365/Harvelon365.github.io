@@ -145,15 +145,8 @@ li a:where(:hover, :focus-visible){
 
 @media screen and (max-width: 1050px){
     .text.sec-text::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        border-left: 4px solid #a323b0;
-        animation: typewriterMobile 4s steps(12) infinite;
+        background-color: transparent;
+        border-left: 0px;
     }
 }
 
@@ -163,15 +156,6 @@ li a:where(:hover, :focus-visible){
     }
     100%{
         left: 0%;
-    }
-}
-
-@keyframes typewriterMobile{
-    0%{
-        left: calc(100% + 4px);
-    }
-    100%{
-        left: calc(100% + 4px);
     }
 }
 
