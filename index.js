@@ -20,7 +20,3 @@ const textload = () => {
 
 textload();
 setInterval(textload, 16000);
-
-$.get("nav.html", function(data){
-    $("#nav-placeholder").replaceWith(data);
-});
