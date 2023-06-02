@@ -149,6 +149,35 @@ li a:where(:hover, :focus-visible){
     overflow: auto;
 }
 
+label{
+    color: white;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 3px solid #a323b0;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+input[type=submit]{
+    background-color: #a323b0;
+    color: white;
+    padding: 12px 20px;
+    border: 3px solid #a323b0;
+    cursor: pointer;
+    transition: background-color 350ms, color 350ms;
+}
+
+input[type=submit]:hover{
+    background-color: white;
+    color: black;
+}
+
 footer{
     height: 10vh;
     background: black;
