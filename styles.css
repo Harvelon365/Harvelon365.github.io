@@ -139,6 +139,16 @@ li a:where(:hover, :focus-visible){
     margin: 5%;
 }
 
+.landing2{
+    padding: 2.5%;
+    background-size: cover;
+    background-color: #a323b0;
+    background-blend-mode: multiply;
+    background-position: center;
+    width: 100%;
+    overflow: auto;
+}
+
 footer{
     height: 10vh;
     background: black;
