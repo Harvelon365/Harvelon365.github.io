@@ -1,5 +1,5 @@
 // Typewriter logic
-const text = document.querySelector(".sec-text");
+const text = document.querySelector(".text.sec-text");
 const textload = () => {
     setTimeout(() => {
         text.textContent = "Harvey Tucker."

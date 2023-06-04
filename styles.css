@@ -1,9 +1,9 @@
-*{
+* {
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     margin: 0;
@@ -12,7 +12,7 @@ body{
     background-color: black;
 }
 
-nav{
+nav {
     height: 10vh;
     background: black;
     position: absolute;
@@ -20,14 +20,14 @@ nav{
     overflow: hidden;
 }
 
-nav img{
+nav img {
     height: 8%;
     margin: 2vh;
     position: fixed;
     z-index: 1;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
     height: 100%;
@@ -37,7 +37,7 @@ nav img{
     margin-right: 1.5%;
 }
 
-.nav-links li a{
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -52,19 +52,19 @@ li a {
 }
 
 
-li a:where(:hover, :focus-visible){
-    color: black!important;
+li a:where(:hover, :focus-visible) {
+    color: black !important;
     background-size: 100% var(--bg-h);
     background-position-x: left;
 }
 
-.corner-logo:hover{
+.corner-logo:hover {
     rotate: 360deg;
     transition: all 350ms;
 }
 
 
-.landing{
+.landing {
     margin-top: 10vh;
     padding: 2.5%;
     background-size: cover;
@@ -75,34 +75,34 @@ li a:where(:hover, :focus-visible){
     overflow: auto;
 }
 
-.top-text-container{
+.top-text-container {
     margin-top: 5%;
     width: 50%;
     overflow: hidden;
     float: left;
 }
 
-.top-text-container p{
+.top-text-container p {
     margin-bottom: 5%;
     color: white;
     font-size: 20px;
 }
 
-.top-text-container .text{
+.top-text-container .text {
     position: relative;
     font-size: 75px;
     font-weight: 600;
 }
 
-.top-text-container .text.first-text{
+.top-text-container .text.first-text {
     color: white;
 }
 
-.text.sec-text{
+.text.sec-text {
     color: #a323b0;
 }
 
-.text.sec-text::before{
+.text.sec-text::before {
     content: "";
     position: absolute;
     top: 0;
@@ -114,32 +114,35 @@ li a:where(:hover, :focus-visible){
     animation: typewriterDesktop 4s steps(12) infinite;
 }
 
-@keyframes typewriterDesktop{
-    40%, 60%{
+@keyframes typewriterDesktop {
+
+    40%,
+    60% {
         left: calc(100% + 4px);
     }
-    100%{
+
+    100% {
         left: 0%;
     }
 }
 
-#startParagraph{
+#startParagraph {
     margin-top: 10%;
 }
 
-.top-image-container{
+.top-image-container {
     background-color: #a323b0;
     position: relative;
     width: 40%;
     float: right;
 }
 
-.portrait-photo{
+.portrait-photo {
     width: 90%;
     margin: 5%;
 }
 
-.landing2{
+.landing2 {
     padding: 2.5%;
     background-size: cover;
     background-color: #a323b0;
@@ -149,11 +152,13 @@ li a:where(:hover, :focus-visible){
     overflow: auto;
 }
 
-label{
+label {
     color: white;
 }
 
-input[type=text], select, textarea{
+input[type=text],
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 3px solid #a323b0;
@@ -164,7 +169,7 @@ input[type=text], select, textarea{
     font-weight: bold;
 }
 
-input[type=submit]{
+input[type=submit] {
     background-color: #a323b0;
     color: white;
     padding: 12px 20px;
@@ -173,12 +178,12 @@ input[type=submit]{
     transition: background-color 350ms, color 350ms;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
     background-color: white;
     color: black;
 }
 
-footer{
+footer {
     height: 10vh;
     background: black;
     width: 100%;
@@ -186,7 +191,7 @@ footer{
     overflow: hidden;
 }
 
-.foot-links{
+.foot-links {
     display: flex;
     align-items: center;
     height: 100%;
@@ -194,19 +199,19 @@ footer{
     margin-left: 1.5%;
 }
 
-.foot-links li a{
+.foot-links li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-@media screen and (max-width: 1050px){
-    .text.sec-text::before{
+@media screen and (max-width: 1050px) {
+    .text.sec-text::before {
         background-color: transparent;
         border-left: 0px;
     }
 
-    .top-image-container{
+    .top-image-container {
         float: none;
         width: 60%;
         margin-top: 5%;
@@ -214,7 +219,7 @@ footer{
         margin-right: auto;
     }
 
-    .top-text-container{
+    .top-text-container {
         float: none;
         width: 100%;
     }
