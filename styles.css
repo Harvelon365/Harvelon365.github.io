@@ -16,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-a {
+a.hyperlink {
     background: linear-gradient(0deg, #a323b0, #a323b0) no-repeat right bottom / 0 var(--bg-h);
     color: #a323b0;
     transition: background-size 350ms, color 350ms;
@@ -24,7 +24,7 @@ a {
 }
 
 
-a:where(:hover, :focus-visible) {
+a.hyperlink:where(:hover, :focus-visible) {
     color: black !important;
     background-size: 100% var(--bg-h);
     background-position-x: left;
@@ -91,11 +91,6 @@ li a:where(:hover, :focus-visible) {
     background-position: center;
     width: 100%;
     overflow: auto;
-}
-
-mark.purple {
-    color: #a323b0;
-    background: none;
 }
 
 .top-text-container {
@@ -183,6 +178,50 @@ mark.purple {
     background-position: center;
     width: 100%;
     overflow: auto;
+}
+
+.page-grid-container {
+    display: inline-grid;
+    column-gap: 50px;
+    row-gap: 50px;
+    grid-auto-flow: column;
+    grid-template-columns: 20% 20%;
+    justify-content: center;
+
+}
+
+.page-grid-item {
+    padding: 2.5%;
+    background-color: black;
+    background-size: cover;
+    overflow: auto;
+}
+
+.grid-item-title {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms, color 350ms;
+    --bg-h: 100%;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+a.page-grid-item-link:where(:hover, :focus-visible) .grid-item-title{
+    color: black !important;
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+#grid-photo {
+    transition: all 350ms;
+}
+
+a.page-grid-item-link:hover #grid-photo{
+    width: 95%;
+    margin: 2.5%;
 }
 
 label {
