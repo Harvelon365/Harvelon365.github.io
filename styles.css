@@ -12,6 +12,15 @@ body {
     background-color: black;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: #a323b0;
+}
+
 nav {
     height: 10vh;
     background: black;
@@ -75,6 +84,11 @@ li a:where(:hover, :focus-visible) {
     overflow: auto;
 }
 
+mark.purple {
+    color: #a323b0;
+    background: none;
+}
+
 .top-text-container {
     margin-top: 5%;
     width: 50%;
@@ -85,7 +99,7 @@ li a:where(:hover, :focus-visible) {
 .top-text-container p {
     margin-bottom: 5%;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .top-text-container .text {
@@ -126,8 +140,18 @@ li a:where(:hover, :focus-visible) {
     }
 }
 
-#startParagraph {
+.top-margin-10 {
     margin-top: 10%;
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {transform: translate(0, 0px);}
+    50% {transform: translate(0, 15px);}
+    100% {transform: translate(0, -0px);}
 }
 
 .top-image-container {
