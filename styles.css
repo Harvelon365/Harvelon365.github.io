@@ -181,7 +181,7 @@ li a:where(:hover, :focus-visible) {
 }
 
 .page-grid-container {
-    display: inline-grid;
+    display: grid;
     column-gap: 50px;
     row-gap: 50px;
     grid-auto-flow: column;
@@ -221,7 +221,10 @@ a.page-grid-item-link:where(:hover, :focus-visible) .grid-item-title{
 
 a.page-grid-item-link:hover #grid-photo{
     width: 95%;
-    margin: 2.5%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 3.5%;
 }
 
 label {
