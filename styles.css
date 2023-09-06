@@ -16,9 +16,18 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-    text-decoration-color: #a323b0;
+a {
+    background: linear-gradient(0deg, #a323b0, #a323b0) no-repeat right bottom / 0 var(--bg-h);
+    color: #a323b0;
+    transition: background-size 350ms, color 350ms;
+    --bg-h: 100%;
+}
+
+
+a:where(:hover, :focus-visible) {
+    color: black !important;
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
 }
 
 nav {
