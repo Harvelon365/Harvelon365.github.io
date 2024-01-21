@@ -1,0 +1,37 @@
+{
+    "monday": {
+      "date": "22",
+      "meal": "Pasta bake (1/4)",
+      "fitness": "Morning Workout"
+    },
+    "tuesday": {
+      "date": "23",
+      "meal": "Chicken kiev, chips and peas",
+      "fitness": "Morning Workout"
+    },
+    "wednesday": {
+      "date": "24",
+      "meal": "Pasta bake (2/4)",
+      "fitness": "Afternoon Workout"
+    },
+    "thursday": {
+      "date": "25",
+      "meal": "Stir fry",
+      "fitness": "Rest"
+    },
+    "friday": {
+      "date": "26",
+      "meal": "Pasta bake (3/4)",
+      "fitness": "Morning Workout"
+    },
+    "saturday": {
+      "date": "27",
+      "meal": "Egg fried rice with veg",
+      "fitness": "Afternoon Workout"
+    },
+    "sunday": {
+      "date": "28",
+      "meal": "Pasta bake (4/4)",
+      "fitness": "Rest"
+    }
+}
