@@ -1,3 +1,11 @@
+
+
+:root {
+    --background-color: black;
+    --foreground-color: white;
+    --highlight-color: #bc28cc;
+}
+
 * {
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +17,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: var(--background-color);
 }
 
 a {
@@ -17,22 +25,22 @@ a {
 }
 
 a.hyperlink {
-    background: linear-gradient(0deg, #a323b0, #a323b0) no-repeat right bottom / 0 var(--bg-h);
-    color: #a323b0;
+    background: linear-gradient(0deg, var(--highlight-color), var(--highlight-color)) no-repeat right bottom / 0 var(--bg-h);
+    color: var(--highlight-color);
     transition: background-size 350ms, color 350ms;
     --bg-h: 100%;
 }
 
 
 a.hyperlink:where(:hover, :focus-visible) {
-    color: black !important;
+    color: var(--background-color) !important;
     background-size: 100% var(--bg-h);
     background-position-x: left;
 }
 
 nav {
     height: 10vh;
-    background: black;
+    background: var(--background-color);
     position: absolute;
     width: 100%;
     overflow: hidden;
@@ -56,14 +64,14 @@ nav img {
 }
 
 .nav-links li a {
-    color: white;
+    color: var(--foreground-color);
     text-decoration: none;
     font-size: 16px;
 }
 
 li a {
-    background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
-    color: white;
+    background: linear-gradient(0deg, var(--foreground-color), var(--foreground-color)) no-repeat right bottom / 0 var(--bg-h);
+    color: var(--foreground-color);
     transition: background-size 350ms, color 350ms;
     --bg-h: 100%;
     padding: 10px;
@@ -71,7 +79,7 @@ li a {
 
 
 li a:where(:hover, :focus-visible) {
-    color: black !important;
+    color: var(--background-color) !important;
     background-size: 100% var(--bg-h);
     background-position-x: left;
 }
@@ -86,7 +94,7 @@ li a:where(:hover, :focus-visible) {
     margin-top: 10vh;
     padding: 2.5%;
     background-size: cover;
-    background-color: black;
+    background-color: var(--background-color);
     background-blend-mode: multiply;
     background-position: center;
     width: 100%;
@@ -102,7 +110,7 @@ li a:where(:hover, :focus-visible) {
 
 .top-text-container p {
     margin-bottom: 5%;
-    color: white;
+    color: var(--foreground-color);
     font-size: 25px;
 }
 
@@ -113,11 +121,11 @@ li a:where(:hover, :focus-visible) {
 }
 
 .top-text-container .text.first-text {
-    color: white;
+    color: var(--foreground-color);
 }
 
 .text.sec-text {
-    color: #a323b0;
+    color: var(--highlight-color);
 }
 
 .text.sec-text::before {
@@ -127,8 +135,8 @@ li a:where(:hover, :focus-visible) {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
-    border-left: 4px solid #a323b0;
+    background-color: var(--background-color);
+    border-left: 4px solid var(--highlight-color);
     animation: typewriterDesktop 4s steps(12) infinite;
 }
 
@@ -148,6 +156,10 @@ li a:where(:hover, :focus-visible) {
     margin-top: 10%;
 }
 
+.top-margin-5 {
+    margin-top: 5%;
+}
+
 .floating {
     animation: floating 3s ease-in-out infinite;
 }
@@ -159,7 +171,7 @@ li a:where(:hover, :focus-visible) {
 }
 
 .top-image-container {
-    background-color: #a323b0;
+    background-color: var(--highlight-color);
     position: relative;
     width: 40%;
     float: right;
@@ -173,7 +185,7 @@ li a:where(:hover, :focus-visible) {
 .landing2 {
     padding: 2.5%;
     background-size: cover;
-    background-color: #a323b0;
+    background-color: var(--highlight-color);
     background-blend-mode: multiply;
     background-position: center;
     width: 100%;
@@ -192,16 +204,16 @@ li a:where(:hover, :focus-visible) {
 
 .page-grid-item {
     padding: 2.5%;
-    background-color: black;
+    background-color: var(--background-color);
     background-size: cover;
     overflow: auto;
 }
 
 .grid-item-title {
-    color: white;
+    color: var(--foreground-color);
     text-align: center;
     font-size: 25px;
-    background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
+    background: linear-gradient(0deg, var(--foreground-color), var(--foreground-color)) no-repeat right bottom / 0 var(--bg-h);
     transition: background-size 350ms, color 350ms;
     --bg-h: 100%;
     padding: 10px;
@@ -210,7 +222,7 @@ li a:where(:hover, :focus-visible) {
 }
 
 a.page-grid-item-link:where(:hover, :focus-visible) .grid-item-title{
-    color: black !important;
+    color: var(--background-color) !important;
     background-size: 100% var(--bg-h);
     background-position-x: left;
 }
@@ -228,7 +240,7 @@ a.page-grid-item-link:hover #grid-photo{
 }
 
 label {
-    color: white;
+    color: var(--foreground-color);
 }
 
 input[type=text],
@@ -236,7 +248,7 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 3px solid #a323b0;
+    border: 3px solid var(--highlight-color);
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
@@ -245,22 +257,22 @@ textarea {
 }
 
 input[type=submit] {
-    background-color: #a323b0;
-    color: white;
+    background-color: var(--highlight-color);
+    color: var(--foreground-color);
     padding: 12px 20px;
-    border: 3px solid #a323b0;
+    border: 3px solid var(--highlight-color);
     cursor: pointer;
     transition: background-color 350ms, color 350ms;
 }
 
 input[type=submit]:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
 }
 
 footer {
     height: 10vh;
-    background: black;
+    background: var(--background-color);
     width: 100%;
     padding-bottom: 2%;
     overflow: hidden;
@@ -275,9 +287,62 @@ footer {
 }
 
 .foot-links li a {
-    color: white;
+    color: var(--foreground-color);
     text-decoration: none;
     font-size: 16px;
+}
+
+.project-box {
+    padding-right: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 0%;
+    margin: 2.5%;
+    margin-top: 0%;
+    background-size: cover;
+    background-color: var(--foreground-color);
+    background-blend-mode: multiply;
+    background-position: center;
+    width: 95%;
+    overflow: auto;
+}
+
+.main-project-image-container-right {
+    background-color: var(--highlight-color);
+    position: relative;
+    width: 25%;
+    float: right;
+}
+
+.main-project-image-container-left {
+    background-color: var(--highlight-color);
+    position: relative;
+    width: 25%;
+    float: left;
+    margin-left: 2.5%;
+}
+
+.project-text-container {
+    width: 70%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: 2.5%;
+}
+
+.project-text-container p {
+    margin: 0%;
+    margin-top: 2%;
+    color: var(--background-color);
+    font-size: 25px;
+}
+
+.centered {
+    text-align: center;
+    width: 97.5%;
+    margin-left: 2.5%;
 }
 
 @media screen and (max-width: 1050px) {
@@ -298,4 +363,38 @@ footer {
         float: none;
         width: 100%;
     }
+
+    .project-text-container {
+        float: none;
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .main-project-image-container-right {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    
+    .main-project-image-container-left {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+    .centered {
+        margin-left: 0%;
+    }
+
+    .project-box {
+        padding: 2.5%;
+    }
 }
+
+::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0%;
+}
+
