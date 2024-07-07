@@ -1,0 +1,13 @@
+:root {
+    --text: hsl(154, 20%, 93%); /* Main text elements */
+    --text5: hsl(154, 20%, 93%, 5%); /* Background of boxes that are more factual (footer) */
+    --background: hsl(154, 20%, 7%); /* Page background */
+    --primary: hsl(187, 69%, 49%); /* Key buttons or important box backgrounds */
+    --primary5: hsl(187, 69%, 49%, 5%); /* Background of less important boxes (groups) */
+    --primary20: hsl(187, 69%, 49%, 20%); /* Backround of boxes to be used against secondary10 */
+    --secondary: hsl(325, 72%, 31%); /* Secondary box backgrounds */
+    --secondary10: hsl(325, 72%, 31%, 10%); /* Background of boxes to be used against primary20 */
+    --secondary20: hsl(325, 72%, 31%, 20%); /* Background of standalone boxes */
+    --secondary30: hsl(325, 72%, 31%, 30%); /* Secondary buttons and interactable objects */
+    --accent: hsl(51, 100%, 50%); /* Icons, graphics and few places with primary and secondary */
+}
