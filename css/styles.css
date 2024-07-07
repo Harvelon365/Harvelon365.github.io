@@ -1,6 +1,8 @@
 :root {
     --text: hsl(154, 20%, 93%); /* Main text elements */
     --text5: hsl(154, 20%, 93%, 5%); /* Background of boxes that are more factual (footer) */
+    --text10: hsl(154, 20%, 93%, 10%); /* Background of boxes that are more factual (footer) */
+    --text50: hsl(154, 20%, 93%, 50%); /* Used when text is hovered */
     --background: hsl(154, 20%, 7%); /* Page background */
     --primary: hsl(187, 69%, 49%); /* Key buttons or important box backgrounds */
     --primary5: hsl(187, 69%, 49%, 5%); /* Background of less important boxes (groups) */
@@ -10,6 +12,13 @@
     --secondary20: hsl(325, 72%, 31%, 20%); /* Background of standalone boxes */
     --secondary30: hsl(325, 72%, 31%, 30%); /* Secondary buttons and interactable objects */
     --accent: hsl(51, 100%, 50%); /* Icons, graphics and few places with primary and secondary */
+
+    --p: 1rem;
+    --h5: 1.1rem;
+    --h4: 1.3rem;
+    --h3: 1.8rem;
+    --h2: 3rem;
+    --h1: 10rem;
 }
 
 * {
@@ -29,7 +38,6 @@ body {
     color: var(--text);
     line-height: 1.75;
     font-family: "Inter", sans-serif;
-    font-weight: 500;
 }
 
 nav {
@@ -40,8 +48,9 @@ nav {
     align-items: center;
     position: fixed;
     z-index: 9997;
-    border-bottom: 1px solid var(--text5);
-    padding: .5vh 7%;
+    border-bottom: 1px solid var(--text10);
+    background-color: var(--background);
+    padding: .5rem 7%;
 }
 
 main {
@@ -49,24 +58,190 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 8vh;
-    margin: 15vh 0;
+    gap: 8em;
+    margin: 5em 0;
     width: 100%;
 }
 
 footer {
+    display: grid;
+    gap: 2em;
+    border-radius: 10px;
+    padding: 3em 5em;
+    width: 100%;
+    margin-bottom: 5em;
+    background-color: var(--text5);
+}
+
+.corner-logo {
+    width: 50px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: var(--p);
+}
+
+.hero {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 2vh;
-    border-radius: 10px;
-    padding: 3vh 5vw;
-    width: 100%;
-    margin-bottom: 10vh;
-    background-color: var(--text5);
+    text-align: center;
+    gap: 3em;
+    margin: 10em 0;
 }
 
 h1 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: var(--h1);
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+}
+
+.main-button {
+    padding: 0.5em 2em;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--background);
+    line-height: 2.25;
+    font-size: var(--p);
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+.sub-button {
+    padding: 0.5em 2em;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--secondary30);
+    color: var(--text);
+    line-height: 2.25;
+    font-size: var(--p);
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: var(--h2);
+}
+
+h3 {
+    font-weight: 700;
+    font-size: var(--h3);
+}
+
+.color-effect {
+    background: linear-gradient(120deg, var(--primary), var(--accent));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+span {
+    display: inline-block;
+}
+
+#who-me {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.tile-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3em;
+}
+
+.tile {
+    background-color: var(--primary5);
+    text-align: center;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+    transition: .25s;
+}
+
+a:hover{
+    color: var(--text50);
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text10);
+    margin-top: 1em;
+}
+
+#footer-left {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#footer-right {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#footer-line {
+    grid-column: 1/3;
+    grid-row: 2;
+}
+
+#latest-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+}
+
+#latest-item {
+    width: 100%;
+    background-color: var(--secondary20);
+    padding: 2em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+#latest-item div{
+    width: 100%;
+}
+
+#latest-date {
+    color: var(--accent);
+}
+
+#latest-more {
+    float: right;
+    color: var(--accent);
 }
