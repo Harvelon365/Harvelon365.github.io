@@ -234,7 +234,7 @@ a:hover{
 }
 
 #latest-item div{
-    width: 100%;
+    width: 50%;
 }
 
 #latest-date {
@@ -244,4 +244,10 @@ a:hover{
 #latest-more {
     float: right;
     color: var(--accent);
+}
+
+#latest-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
 }
