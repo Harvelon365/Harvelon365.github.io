@@ -11,3 +11,62 @@
     --secondary30: hsl(325, 72%, 31%, 30%); /* Secondary buttons and interactable objects */
     --accent: hsl(51, 100%, 50%); /* Icons, graphics and few places with primary and secondary */
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0 12%;
+    width: auto !important;
+    position: relative;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.75;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    z-index: 9997;
+    border-bottom: 1px solid var(--text5);
+    padding: .5vh 7%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8vh;
+    margin: 15vh 0;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    border-radius: 10px;
+    padding: 3vh 5vw;
+    width: 100%;
+    margin-bottom: 10vh;
+    background-color: var(--text5);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
