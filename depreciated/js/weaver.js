@@ -74,6 +74,25 @@ class WordDict
     }
 }
 
+function AddWordToDisplay(word, start, end)
+{
+    const container = document.getElementById("words-container");
+
+    let wordPlace = document.createElement('div');
+    wordPlace.className = "word";
+    if (start == 1) wordPlace.id = "start";
+    if (end == 1) wordPlace.id = "end";
+    
+    for (let i = 0; i < word.length; i++) {
+        let letter = document.createElement('div');
+        letter.className = "letter";
+        letter.innerText = word[i].toUpperCase();
+        wordPlace.appendChild(letter);
+    }
+
+    container.appendChild(wordPlace);
+}
+
 function WeaverSearch(start, end, dict)
 {
     let finalPath = [];
@@ -87,7 +106,6 @@ function WeaverSearch(start, end, dict)
         if (q.word == end)
         {
             finalPath = q.path;
-            finalPath.push(q.word);
             break;
         }
         
@@ -115,8 +133,15 @@ function WeaverSearch(start, end, dict)
         }
         queue.sort((a,b) => (a.info.heuristic + a.distance) - (b.info.heuristic + b.distance));
     }
+
+    finalPath.shift();
+    AddWordToDisplay(start, 1, 0)
     
-    console.log("\n----------\n" + finalPath.join("\n") + "\n----------\n");
+    for (const word of finalPath) {
+        AddWordToDisplay(word, 0, 0);
+    }
+
+    AddWordToDisplay(end, 0, 1)
 }
 
 function WeaverSolver()
@@ -124,9 +149,12 @@ function WeaverSolver()
     let startWord = "";
     let endWord = "";
     let dict;
-    
-    const noOfLetters = prompt("4 or 5 letter game?");
-    if (noOfLetters == "5")
+
+    const startIn = document.getElementById("start-word");
+    const endIn = document.getElementById("end-word");
+
+    const noOfLetters = startIn.value.length;
+    if (noOfLetters == 5)
     {
         dict = new WordDict(5);
         for (let word of words5)
@@ -143,19 +171,19 @@ function WeaverSolver()
         }
     }
     
-    while (!dict.WordExists(startWord))
-    {
-        startWord = prompt("Starting word:").toLowerCase();
-        console.log(dict.GetWord(startWord));
-    }
-    while (!dict.WordExists(endWord))
-    {
-        endWord = prompt("Ending word:").toLowerCase();
-    }
+    startWord = startIn.value;
+
+    endWord = endIn.value;
     
     dict.Init(endWord);
     
     WeaverSearch(startWord, endWord, dict);
 }
 
-//WeaverSolver();
+const startButton = document.getElementById("start-button");
+if (startButton != null)
+{
+    startButton.addEventListener("click", () => {
+        WeaverSolver();
+    });
+}

@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h3 {
+    margin: 10px;
+}
+
+input {
+    width: 25%;
+}
+
+button {
+    width: 10%;
+}
+
+#input-container {
+    position: relative;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 100%;
+    width: calc(100% - 100px);
+    height: min-content;
+    padding: 25px;
+    margin: 5px auto;
+    border: 2px black solid;
+    text-align: center;
+}
+
+#words-container {
+    position: relative;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 100%;
+    width: min-content;
+    height: min-content;
+    padding: 25px;
+    margin: 0 auto;
+    border: 2px black solid;
+}
+
+.word {
+    display: flex;
+    gap: 5px;
+}
+
+.letter
+{
+    height: 95px;
+    width: 95px;
+    border: 2px black solid;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90px;
+}
+
+#start div
+{
+    background-color: limegreen;
+}
+
+#end div
+{
+    background-color: indianred;
+}
