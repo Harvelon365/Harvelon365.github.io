@@ -10,6 +10,7 @@ const date = document.getElementById("latest-date");
 const text = document.getElementById("latest-text");
 const more = document.getElementById("latest-more");
 
+more.href += "?postID=" + data[data.length-1].id;
 title.textContent = data[data.length-1].title;
 
 var da = new Date(data[data.length-1].created_at.substring(0, 10));

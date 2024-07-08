@@ -53,6 +53,11 @@ nav {
     padding: .5rem 7%;
 }
 
+nav a {
+    display: flex;
+    justify-content: center;
+} 
+
 main {
     display: flex;
     flex-direction: column;
