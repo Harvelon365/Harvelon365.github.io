@@ -13,6 +13,10 @@ for (const post of data) {
     if (post.id == params.get('postID')-1) explore = post;
 }
 
+if (explore == null) {
+    document.getElementById("explore-panel").style.display = "none";
+}
+
 const title = document.getElementById("post-title");
 const date = document.getElementById("post-date");
 const text = document.getElementById("post-text");
@@ -22,11 +26,8 @@ title.textContent = main.title;
 var da = new Date(main.created_at.substring(0, 10));
 
 date.textContent = da.toLocaleString('en-UK', { day: 'numeric', month: 'long', year: 'numeric' });
-text.textContent = main.text;
+text.innerHTML = main.text.replace(/\n/g, "<br><br>");
 
-if (explore == null) {
-    document.getElementById("explore-panel").style.display = "none";
-}
 
 const Ltitle = document.getElementById("latest-title");
 const Ldate = document.getElementById("latest-date");
