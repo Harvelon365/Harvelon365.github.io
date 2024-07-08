@@ -216,14 +216,14 @@ a:hover{
     grid-row: 2;
 }
 
-#latest-panel {
+.panel {
     display: flex;
     flex-direction: column;
     gap: 2em;
     width: 100%;
 }
 
-#latest-item {
+.panel-item {
     width: 100%;
     background-color: var(--secondary20);
     padding: 2em;
@@ -233,21 +233,35 @@ a:hover{
     gap: 2em;
 }
 
-#latest-item div{
+.panel-item div{
     width: 50%;
 }
 
-#latest-date {
+.panel-accent {
     color: var(--accent);
 }
 
-#latest-more {
+.panel-more {
     float: right;
     color: var(--accent);
 }
 
-#latest-text {
+.panel-text {
     text-overflow: ellipsis;
     overflow: hidden;
     word-wrap: break-word;
+}
+
+.post-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+}
+
+.post-text-box {
+    width: 100%;
+    background-color: var(--primary5);
+    padding: 2em;
+    border-radius: 10px;
 }
