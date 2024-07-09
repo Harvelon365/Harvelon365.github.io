@@ -281,3 +281,48 @@ a:hover{
     grid-template-rows: auto;
     gap: 1em;
 }
+
+
+/* WEAVER */
+
+#words-container {
+    position: relative;
+    gap: 5px;
+    width: min-content;
+    height: min-content;
+    padding: 2em;
+    margin-top: -5em;
+    margin-bottom: 5em;
+    border-radius: 10px;
+    /* background-color: var(--secondary20); */
+    display: none;
+}
+
+.word {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.letter
+{
+    font-family: "Inter", sans-serif;
+    height: 95px;
+    width: 95px;
+    border-radius: 10px;
+    background-color: var(--primary20);
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 90px;
+}
+
+#start div
+{
+    background-color: limegreen;
+}
+
+#end div
+{
+    background-color: indianred;
+}

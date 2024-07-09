@@ -142,6 +142,9 @@ function WeaverSearch(start, end, dict)
     }
 
     AddWordToDisplay(end, 0, 1)
+
+    document.getElementById("words-container").style.display = "grid";
+    document.getElementById("words-container").scrollIntoView({ behavior: "smooth" });
 }
 
 function WeaverSolver()
@@ -184,6 +187,8 @@ const startButton = document.getElementById("start-button");
 if (startButton != null)
 {
     startButton.addEventListener("click", () => {
+        document.getElementById("words-container").style.display = "grid";
+        document.getElementById("words-container").innerHTML = ""
         WeaverSolver();
     });
 }

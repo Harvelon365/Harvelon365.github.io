@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/weaver.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title>Weaver Solver</title>
 </head>
 <body>
-    <div id="input-container">
-        <h1>Weaver Solver</h1>
-        <h3>Enter the starting and ending words here then click run to find the shortest path!</h3>
-        <label for="start-word">Start</label>
-        <input type="text" id="start-word">
-        <label for="end-word">End</label>
-        <input type="text" id="end-word">
-        <button type="button" id="start-button">Run!</button>
-    </div>
-    <div id="words-container"></div>
-
+    <main>
+        <div class="hero">
+            <h1 class="color-effect">Weaver Solver</h1>
+            <h2>An automatic solver for the popular Weaver game!</h2>
+            <p>Input the starting and ending words here to find the shortest path</p>
+            <div class="button-box">
+                <label for="start-word">Start</label>
+                <input type="text" id="start-word">
+                <label for="end-word">End</label>
+                <input type="text" id="end-word">
+            </div>
+            <button type="button" id="start-button" class="main-button">Run!</button>
+        </div>
+        <div id="words-container"></div>
+        <footer>
+            <div id="footer-left">
+                <p style="color: var(--text50);">SOCIALS</p>
+                <a href="https://www.linkedin.com/in/harvey-tucker-70658a292/">LinkedIn</a>
+            </div>
+            <div id="footer-right">
+                <p style="color: var(--text50);">OTHER LINKS</p>
+                <a href="weaver-solver.html">Weaver Solver (incomplete)</a>
+            </div>
+            <div id="footer-line" class="line"></div>
+            <p>This website was handcrafted by Harvey Tucker</p>
+        </footer>
+    </main>
     <script type="module" src="js/weaver.js"></script>
 </body>
 </html>

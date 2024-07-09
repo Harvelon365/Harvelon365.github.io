@@ -1,27 +1,35 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0 12%;
+    width: auto !important;
+    position: relative;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.75;
+    font-family: "Inter", sans-serif;
 }
 
 h1, h3 {
-    margin: 10px;
+    margin: 0;
 }
 
 input {
-    width: 25%;
+    width: 25em;
 }
 
 button {
-    width: 10%;
+    width: 10em;
 }
 
 #input-container {
-    position: relative;
-    display: grid;
-    gap: 5px;
-    grid-template-columns: 100%;
-    width: calc(100% - 100px);
-    height: min-content;
-    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
     margin: 5px auto;
     border: 2px black solid;
     text-align: center;
