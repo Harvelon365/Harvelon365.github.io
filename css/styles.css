@@ -326,3 +326,9 @@ a:hover{
 {
     background-color: indianred;
 }
+
+#spotify-login-button
+{
+    background-color: #1db954;
+    font-weight: bold;
+}
