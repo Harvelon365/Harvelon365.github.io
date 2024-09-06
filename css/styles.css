@@ -172,7 +172,7 @@ span {
 
 .tile-row {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: calc((100% - 6em) / 3) calc((100% - 6em) / 3) calc((100% - 6em) / 3);
     gap: 3em;
 }
 
@@ -181,6 +181,7 @@ span {
     text-align: center;
     padding: 2em;
     border-radius: 10px;
+    width: 100%
 }
 
 a {
