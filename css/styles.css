@@ -79,6 +79,7 @@ footer {
 
 .corner-logo {
     width: 50px;
+    border-radius: 2px;
 }
 
 .menu {
