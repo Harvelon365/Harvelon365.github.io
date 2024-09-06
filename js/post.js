@@ -12,10 +12,7 @@ for (const post of data) {
     if (post.id == params.get('postID')) main = post;
     if (post.id == params.get('postID')-1) explore = post;
 }
-
-if (explore == null) {
-    document.getElementById("explore-panel").style.display = "none";
-}
+console.log(explore);
 
 const title = document.getElementById("post-title");
 const date = document.getElementById("post-date");
@@ -34,10 +31,18 @@ const Ldate = document.getElementById("latest-date");
 const Ltext = document.getElementById("latest-text");
 const Lmore = document.getElementById("latest-more");
 
-Lmore.href += "?postID=" + explore.id;
-Ltitle.textContent = explore.title;
 
-var da = new Date(explore.created_at.substring(0, 10));
+if (explore != null) {
+    Lmore.href += "?postID=" + explore.id;
+    Ltitle.textContent = explore.title;
+    
+    var da = new Date(explore.created_at.substring(0, 10));
+    
+    Ldate.textContent = da.toLocaleString('en-UK', { day: 'numeric', month: 'long', year: 'numeric' });
+    Ltext.textContent = explore.summary;
+}
+else {
+    document.getElementById("explore-panel").style.display = "none";
+}
 
-Ldate.textContent = da.toLocaleString('en-UK', { day: 'numeric', month: 'long', year: 'numeric' });
-Ltext.textContent = explore.summary;
+document.getElementById("loading-cover").style.display = "none";

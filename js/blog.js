@@ -13,3 +13,5 @@ for (const post of data) {
     + '<p id="post-text">' + post.title + '</p>'
     + '</a>';
 }
+
+document.getElementById("loading-cover").style.display = "none";
