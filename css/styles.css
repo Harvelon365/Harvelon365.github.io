@@ -102,7 +102,7 @@ p {
     flex-direction: column;
     text-align: center;
     gap: 3em;
-    margin: 10em 0;
+    margin: 10em 0 3em 0;
 }
 
 h1 {
@@ -129,6 +129,7 @@ h1 {
     font-size: var(--p);
     cursor: pointer;
     font-family: "Inter", sans-serif;
+    font-weight: 600;
 }
 
 .sub-button {
