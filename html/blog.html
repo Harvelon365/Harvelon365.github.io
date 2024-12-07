@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="author" content="Harvey Tucker">
+    <meta name="description" content="Harvey Tucker is a student, programmer and developer from the UK. Check out some of his work here!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>Playlist Sorter</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.webp">
+    <title>Harvey Tucker</title>
 </head>
 <body>
+    <nav>
+        <a href="main.html"><img src="../images/logo.webp" alt="Logo" class="corner-logo"></a>
+        <div class="menu">
+            <a href="blog.html">Blog</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="secrets.html">Secrets</a>
+        </div>
+    </nav>
     <main>
-        <div class="hero">
-            <h1 class="color-effect">Playlist Sorter</h1>
-            <h2>Helps to sort your Spotify playlists with a friendly interface!</h2>
-            <button type="button" id="spotify-login-button" class="main-button">Login with Spotify to begin</button>
+        <div class="loading-cover" id="loading-cover">
+            <div class="loading-dot"></div>
+        </div>
+        <div class="post-box">
+            <h2>Blog Posts</h2>
+            <div id="blog-index" class="post-text-box">
+            </div>
         </div>
         <footer>
             <div id="footer-left">
@@ -29,6 +44,6 @@
             <p>This website was handcrafted by Harvey Tucker</p>
         </footer>
     </main>
-    <script type="module" src="js/playlist-sorter.js"></script>
+    <script type="module" src="../js/blog.js"></script>
 </body>
 </html>

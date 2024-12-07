@@ -8,39 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.webp">
     <title>Harvey Tucker</title>
 </head>
 <body>
+    <nav>
+        <a href="main.html"><img src="../images/logo.webp" alt="Logo" class="corner-logo"></a>
+        <div class="menu">
+            <a href="blog.html">Blog</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="secrets.html">Secrets</a>
+        </div>
+    </nav>
     <main>
         <div class="hero">
-            <h1 class="color-effect">Hello World</h1>
-            <p>Welcome to the world of Harvey Tucker!<br>Take a look around and see what you can find...</p>
+            <h1 class="color-effect">Um... Hello?</h1>
+            <p>Looks like you're a bit lost?<br>The path is only a click away...</p>
             <div class="button-box">
-                <button class="main-button" onclick="location.href='projects.html'">My Projects</button>
-                <button class="sub-button" onclick="location.href='contact.html'">Contact Me</button>
-            </div>
-            <p>▼ Scroll to explore ▼</p>
-        </div>
-        <div id="who-me">
-            <h2>Who am I?</h2>
-            <div class="tile-row">
-                <div class="tile">
-                    <img src="images/student.png" alt="Student image">
-                    <h3>Student</h3>
-                    <p>A second year BSc Computer Science student at the University of Nottingham currently applying for an industrial placement for my penultimate year.</p>
-                </div>
-                <div class="tile">
-                    <img src="images/developer.png" alt="Programmer image">
-                    <h3>Programmer</h3>
-                    <p>An aspiring software engineer working on projects in over 10+ popular languages including C#, Java and Python.</p>
-                </div>
-                <div class="tile">
-                    <img src="images/gamedev.png" alt="Game development image">
-                    <h3>Game Developer</h3>
-                    <p>I am an aspiring game developer with one commercially released game that was featured in an indie game jam.</p>
-                </div>
+                <button class="main-button" onclick="location.href='index.html'">Home</button>
+                <button class="sub-button" onclick="location.href='projects.html'">My Projects</button>
             </div>
         </div>
         <div class="panel">
@@ -69,6 +57,6 @@
             <p>This website was handcrafted by Harvey Tucker</p>
         </footer>
     </main>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="../js/index.js"></script>
 </body>
 </html>
