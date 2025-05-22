@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Answer the Question</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; }
+    input { margin: 0.5em 0; display: block; }
+  </style>
+</head>
+<body>
+  <h2>Answer the Question!</h2>
+  <input id="username" placeholder="Enter your name">
+  <input id="answer" placeholder="Your answer">
+  <button onclick="submitAnswer()">Submit</button>
+
+  <script>
+    const socket = new WebSocket("ws://YOUR-WEBSOCKET-SERVER-IP:3000");
+
+    socket.onopen = () => {
+      console.log("Connected to WebSocket server.");
+    };
+
+    socket.onerror = (err) => {
+      console.error("WebSocket error:", err);
+    };
+
+    function submitAnswer() {
+      const username = document.getElementById("username").value;
+      const answer = document.getElementById("answer").value;
+      const payload = JSON.stringify({ username, answer });
+      socket.send(payload);
+    }
+  </script>
+</body>
+</html>

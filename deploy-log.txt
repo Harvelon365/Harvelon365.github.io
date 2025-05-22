@@ -1,0 +1,866 @@
+####### 2024-12-06 19:50:44 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-06 19:54:48 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   f40a9b4..8f750e5  master     -> origin/master
+Updating f40a9b4..8f750e5
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-06 21:29:58 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 00:25:53 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+error: insufficient permission for adding an object to repository database .git/objects
+fatal: failed to write object
+fatal: unpack-objects failed
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 00:27:55 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+error: insufficient permission for adding an object to repository database .git/objects
+fatal: failed to write object
+fatal: unpack-objects failed
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 00:37:50 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   34e4b84..d936d1a  master     -> origin/master
+Updating 34e4b84..d936d1a
+Fast-forward
+ 404.html => html/404.html                         |  8 ++++----
+ answerpage.html => html/answerpage.html           |  2 +-
+ blog.html => html/blog.html                       |  8 ++++----
+ main.html => html/main.html                       | 12 ++++++------
+ playlist-sorter.html => html/playlist-sorter.html |  4 ++--
+ post.html => html/post.html                       |  8 ++++----
+ weaver-solver.html => html/weaver-solver.html     |  6 +++---
+ 7 files changed, 24 insertions(+), 24 deletions(-)
+ rename 404.html => html/404.html (89%)
+ rename answerpage.html => html/answerpage.html (92%)
+ rename blog.html => html/blog.html (85%)
+ rename main.html => html/main.html (88%)
+ rename playlist-sorter.html => html/playlist-sorter.html (91%)
+ rename post.html => html/post.html (89%)
+ rename weaver-solver.html => html/weaver-solver.html (89%)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 00:44:12 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   d936d1a..ca44143  master     -> origin/master
+Updating d936d1a..ca44143
+Fast-forward
+ html/main.html | 10 ++++++++++
+ index.php      |  2 +-
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 00:49:07 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   ca44143..9c8b71a  master     -> origin/master
+Updating ca44143..9c8b71a
+Fast-forward
+ html/main.html | 1 -
+ 1 file changed, 1 deletion(-)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 00:59:25 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   9c8b71a..f2cffc7  master     -> origin/master
+Updating 9c8b71a..f2cffc7
+Fast-forward
+ html/main.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 06:03:29 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 11:19:54 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-07 15:09:34 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-10 17:42:37 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   f2cffc7..ea910b7  master     -> origin/master
+Updating f2cffc7..ea910b7
+Fast-forward
+ html/footer.html |  15 ++++++++
+ html/header.html |  15 ++++++++
+ html/main.html   | 113 ++++++++++++++++++-------------------------------------
+ html/nav.html    |   9 +++++
+ index.php        |   4 +-
+ 5 files changed, 79 insertions(+), 77 deletions(-)
+ create mode 100644 html/footer.html
+ create mode 100644 html/header.html
+ create mode 100644 html/nav.html
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2024-12-23 12:28:21 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-01-16 13:04:22 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-01-25 18:20:47 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-02-14 11:26:54 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-02-17 10:16:08 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-02-18 08:08:26 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+error: insufficient permission for adding an object to repository database .git/objects
+fatal: failed to write object
+fatal: unpack-objects failed
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-02-23 16:55:10 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   f0e3360..0ec0629  master     -> origin/master
+Updating f0e3360..0ec0629
+Fast-forward
+ blog.php       | 1 +
+ html/404.html  | 2 +-
+ html/main.html | 2 +-
+ html/post.html | 2 +-
+ 4 files changed, 4 insertions(+), 3 deletions(-)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-02-23 17:07:57 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   0ec0629..f6a5b5d  master     -> origin/master
+Updating 0ec0629..f6a5b5d
+Fast-forward
+ html/nav.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-04-08 16:51:22 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-04-08 16:51:23 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-04-20 03:57:45 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   f6a5b5d..652e674  master     -> origin/master
+Updating f6a5b5d..652e674
+Fast-forward
+ .idea/.gitignore                |   8 +++++++
+ .idea/Harvelon365.github.io.iml |   8 +++++++
+ .idea/modules.xml               |   8 +++++++
+ .idea/php.xml                   |  51 ++++++++++++++++++++++++++++++++++++++++
+ .idea/vcs.xml                   |   6 +++++
+ MenuMonteCarlo.mp4              | Bin 0 -> 4464839 bytes
+ 6 files changed, 81 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/Harvelon365.github.io.iml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/php.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 MenuMonteCarlo.mp4
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-04-20 03:59:18 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   652e674..b9d5a4a  master     -> origin/master
+Updating 652e674..b9d5a4a
+Fast-forward
+ InspectorInfo01.mp4 | Bin 0 -> 811409 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 InspectorInfo01.mp4
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-04-20 04:03:14 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   b9d5a4a..27a67cb  master     -> origin/master
+Updating b9d5a4a..27a67cb
+Fast-forward
+ InspectorInfo01.mp4 => DVDCluedo/InspectorInfo01.mp4 | Bin
+ MenuMonteCarlo.mp4 => DVDCluedo/MenuMonteCarlo.mp4   | Bin
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rename InspectorInfo01.mp4 => DVDCluedo/InspectorInfo01.mp4 (100%)
+ rename MenuMonteCarlo.mp4 => DVDCluedo/MenuMonteCarlo.mp4 (100%)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	calendar-dash.html
+	deploy-log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-04-30 20:25:32 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   27a67cb..64a7701  master     -> origin/master
+Updating 27a67cb..64a7701
+Fast-forward
+ DVDCluedo/InspectorInfo01.mp4 | Bin 811409 -> 0 bytes
+ DVDCluedo/MenuMonteCarlo.mp4  | Bin 4464839 -> 0 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 DVDCluedo/InspectorInfo01.mp4
+ delete mode 100644 DVDCluedo/MenuMonteCarlo.mp4
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .idea/.gitignore
+	modified:   .idea/Harvelon365.github.io.iml
+	modified:   .idea/modules.xml
+	modified:   .idea/php.xml
+	modified:   .idea/vcs.xml
+	modified:   404.php
+	modified:   archive/404.html
+	modified:   archive/contact.html
+	modified:   archive/css/Roboto-Regular.ttf
+	modified:   archive/css/styles.css
+	modified:   archive/images/404image.webp
+	modified:   archive/images/blip.webp
+	modified:   archive/images/contactImage.webp
+	modified:   archive/images/me.webp
+	modified:   archive/images/portrait.webp
+	modified:   archive/images/projectsIcon.webp
+	modified:   archive/index.html
+	modified:   archive/js/main.js
+	modified:   archive/map.html
+	modified:   archive/projects.html
+	modified:   blog.php
+	modified:   css/styles.css
+	modified:   css/weaver.css
+	modified:   deploy.php
+	modified:   html/404.html
+	modified:   html/answerpage.html
+	modified:   html/blog.html
+	modified:   html/footer.html
+	modified:   html/header.html
+	modified:   html/main.html
+	modified:   html/nav.html
+	modified:   html/playlist-sorter.html
+	modified:   html/post.html
+	modified:   html/weaver-solver.html
+	modified:   images/Web Logo Dark.png
+	modified:   images/code.svg
+	modified:   images/developer.png
+	modified:   images/gamedev.png
+	modified:   images/logo-border.webp
+	modified:   images/logo.webp
+	modified:   images/placeholder.webp
+	modified:   images/student.png
+	modified:   index.php
+	modified:   js/answerpage.js
+	modified:   js/blog.js
+	modified:   js/index.js
+	modified:   js/playlist-sorter.js
+	modified:   js/post.js
+	modified:   js/weaver-words.js
+	modified:   js/weaver.js
+	modified:   post.php
+	modified:   sitemap.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	DVDCluedo/
+	calendar-dash.html
+	deploy-log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
