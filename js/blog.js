@@ -8,7 +8,7 @@ const index = document.getElementById("blog-index");
 
 for (const post of data) {
     var da = new Date(post.created_at.substring(0, 10));
-    index.innerHTML += '<a href="post.html?postID=' + post.id + '" class="blog-index-row">'
+    index.innerHTML += '<a href="/post?postID=' + post.id + '" class="blog-index-row">'
     + '<p class="panel-accent">' + da.toLocaleString('en-UK', { day: 'numeric', month: 'long', year: 'numeric' }) + '</p>'
     + '<p id="post-text">' + post.title + '</p>'
     + '</a>';

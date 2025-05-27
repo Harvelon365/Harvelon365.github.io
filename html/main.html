@@ -1,10 +1,12 @@
 <main>
     <div class="hero">
-        <h1 class="color-effect">Hello World</h1>
+        <div id="hero-title-container">
+            <h1 class="color-effect mono-text" id="hero-title">Hello world!</h1>
+        </div>
         <p>Welcome to the world of Harvey Tucker!<br>Take a look around and see what you can find...</p>
         <div class="button-box">
-            <button class="main-button" onclick="location.href='../projects.php'">My Projects</button>
-            <button class="sub-button" onclick="location.href='../contact.php'">Contact Me</button>
+            <button class="main-button" onclick="location.href='/projects'">My Projects</button>
+            <button class="sub-button" onclick="location.href='/contact'">Contact Me</button>
         </div>
         <p>▼ Scroll to explore ▼</p>
     </div>
@@ -37,8 +39,9 @@
             </div>
             <div>
                 <p class="panel-text" id="latest-text">Loading...</p>
-                <a class="panel-more" id="latest-more" href="../post.php">Read more</a>
+                <a class="panel-more" id="latest-more" href="/post">Read more</a>
             </div>
         </div>
     </div>
 </main>
+<script type="module" src="../js/main.js"></script>
