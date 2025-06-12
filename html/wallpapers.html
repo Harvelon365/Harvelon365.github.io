@@ -11,14 +11,15 @@
     <title>Wallpaper Upload</title>
 </head>
 <body>
-<script type="text/javascript" src="../js/wallpapers.js"></script>
     <div style="width: 100vw; display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 25vh;">
         <h1 class="color-effect" style="font-size: 4rem; line-height: 2;">Upload a New Wallpaper</h1>
         <p>Use the widget below to upload images to the wallpaper server</p>
         <p>Any images that aren't roughly in a 16:9 (landscape) aspect ratio will be cropped</p>
     </div>
-    <div class="button-box" style="margin: 2rem;">
+    <div class="button-box" id="upload-box" style="margin: 2rem;">
         <input class="sub-button" id="file-uploader" type="file" accept="image/jpeg,image/png" multiple/>
         <button class="main-button" id="upload-button" onclick="upload()">Upload</button>
     </div>
+    <h3 style="display: none" id="success-message">Upload Successful!</h3>
+<script type="text/javascript" src="../js/wallpapers.js"></script>
 </body>

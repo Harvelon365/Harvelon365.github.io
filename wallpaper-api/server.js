@@ -1,9 +1,28 @@
-const express = require('express');
-const multer = require('multer');
-const fs = require('fs');
-const path = require('path');
-const cors = require('cors');
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
+import { fileURLToPath } from 'url';
+import express from 'express';
+import multer from 'multer';
+import fs from 'fs';
+import path from 'path';
+import cors from 'cors';
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+import { createClient } from "webdav";
+import ical from "node-ical";
+const client = createClient(
+    "https://86.17.240.174/radicale/crisp/93d70908-29e5-67ef-6ed4-7be2e8e82544/",
+    {
+        username: "crisp",
+        password: "ilovechippies"
+    }
+)
+
+import {Jimp, loadFont} from "jimp";
+const font = await loadFont("dialog.fnt");
 
 app.use(express.json());
 app.use(cors());
@@ -25,19 +44,147 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.get('/wallpapers', (req, res) => {
+
+async function fetchEvents() {
+    try {
+        let eventsToReturn = [];
+        const files = await getAllFilesRecursive("/");
+
+        for (const file of files) {
+            if (file.type === "file") {
+                const icsData = await client.getFileContents(file.filename, {format:"text"});
+
+                try {
+                    const parsed = ical.parseICS(icsData);
+
+                    for (const k in parsed) {
+                        const entry = parsed[k];
+
+                        if (entry.type === "VEVENT") {
+                            // console.log({
+                            //     summary: entry.summary,
+                            //     start: entry.start,
+                            //     end: entry.end
+                            // });
+                            eventsToReturn.push(entry);
+                        }
+                    }
+                } catch (parseErr) {
+                    console.warn(`Skipping non-ICS file: ${file.filename}`);
+                }
+            }
+        }
+
+        //new Date(2024, 11, 1)
+        eventsToReturn = eventsToReturn.filter(event => event.end > new Date());
+        eventsToReturn = eventsToReturn.sort((a, b) => a.start - b.start);
+        return eventsToReturn.slice(0, 5);
+    } catch (err) {
+        console.error("Error fetching events: " + err);
+    }
+}
+
+async function getAllFilesRecursive(path = "/") {
+    const results = [];
+
+    const items = await client.getDirectoryContents(path);
+    for (const item of items) {
+        if (item.type === "directory") {
+            const subItems = await getAllFilesRecursive(item.filename);
+            results.push(...subItems);
+        } else if (item.type === "file") {
+            results.push(item);
+        }
+    }
+
+    return results;
+}
+
+function FormatDateTime(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+
+    const nextWeek = new Date(today);
+    nextWeek.setDate(today.getDate() + 6);
+
+    const dateOnly = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+    let dayLabel;
+    if (dateOnly.getTime() === today.getTime()) dayLabel = "Today";
+    else if (dateOnly.getTime() === tomorrow.getTime()) dayLabel = "Tomorrow";
+    else if (dateOnly <= nextWeek) dayLabel = date.toLocaleDateString(undefined, { weekday: "short" });
+    else {
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        dayLabel = `${day}/${month}`;
+    }
+
+    const time = date.toLocaleTimeString(undefined, {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    });
+
+    if (now > date) return "Now: ";
+    return dateString.dateOnly ? `${dayLabel}: ` : `${dayLabel} - ${time}: `;
+}
+
+app.get('/wallpapers', async (req, res) => {
     if (availableWallpapers.length === 0) {
         for (let i = 0; i < wallpapers.length; i++)
         {
             availableWallpapers.push(i);
         }
     }
-    let randomIndex = Math.floor(Math.random() * availableWallpapers.length);
-    const randomWallpaper = wallpapers[randomIndex];
+    const randomIndex = Math.floor(Math.random() * availableWallpapers.length);
+    const wallpaperIndex = availableWallpapers[randomIndex];
     availableWallpapers.splice(randomIndex, 1);
-    res.json(randomWallpaper);
-});
 
+    const randomWallpaper = await Jimp.read(wallpapers[wallpaperIndex].url);
+
+    const scale = Math.max(1920 / randomWallpaper.bitmap.width, 1080 / randomWallpaper.bitmap.height);
+    const newWidth = Math.ceil(randomWallpaper.bitmap.width * scale);
+    const newHeight = Math.ceil(randomWallpaper.bitmap.height * scale);
+    randomWallpaper.resize({ w: newWidth, h: newHeight });
+
+    const x = Math.floor((newWidth - 1920) / 2);
+    const y = Math.floor((newHeight - 1080) / 2);
+    randomWallpaper.crop({ x: x, y: y, w: 1920, h: 1080})
+
+    if (!wallpapers[wallpaperIndex].url.includes("Want-more-wallpapers"))
+    {
+        let text = "Upcoming events:\n";
+
+        try {
+            const nextEvents = await fetchEvents();
+            if (nextEvents.length === 0) {
+                text = "No upcoming events!";
+            } else {
+                for (const event of nextEvents) {
+                    const when = FormatDateTime(event.start);
+                    text += when + event.summary + "\n";
+                }
+            }
+        } catch (err) {
+            console.error("Error fetching events: " + err);
+        }
+
+        randomWallpaper.print({font, x: 10, y: 10, text: text});
+    }
+
+    await randomWallpaper.write(path.join(wallpapersDir, 'output.jpg'));
+
+    const outputWallpaper = {
+        url: 'https://harveytucker.com/walls/output.jpg',
+        title: wallpapers[randomIndex].title
+    }
+    console.log(outputWallpaper);
+    res.json(outputWallpaper);
+});
 
 
 app.post('/wallpapers/upload', upload.single('image'), (req, res) => {
@@ -52,13 +199,6 @@ app.post('/wallpapers/upload', upload.single('image'), (req, res) => {
   loadWallpapers();
 });
 
-
-
-app.listen(3001, () => {
-    loadWallpapers();
-    console.log('Wallpaper API is running on http://localhost:3001/api/wallpapers');
-});
-
 function loadWallpapers() {
     wallpapers = [];
     availableWallpapers = [];
@@ -67,7 +207,7 @@ function loadWallpapers() {
         console.error('Wallpapers directory does not exist!');
     }
 
-    const files = fs.readdirSync(wallpapersDir).filter(file => file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.JPG') || file.endsWith('.png') || file.endsWith('.PNG'));
+    const files = fs.readdirSync(wallpapersDir).filter(file => (file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.JPG') || file.endsWith('.png') || file.endsWith('.PNG')) && !file.includes("output"));
 
     for (const f of files) {
         console.log(`Found wallpaper: ${f}`);
@@ -80,3 +220,13 @@ function loadWallpapers() {
 
     console.log(`Loaded ${wallpapers.length} wallpapers`);
 }
+
+async function start() {
+  loadWallpapers();
+
+  app.listen(3002, '0.0.0.0', () => {
+    console.log('Wallpaper API is running on http://localhost:3002/api/wallpapers');
+  });
+}
+
+start();
