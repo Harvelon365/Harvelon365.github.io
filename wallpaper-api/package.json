@@ -15,8 +15,10 @@
     "express": "^5.1.0",
     "express-fileupload": "^1.5.1",
     "jimp": "^1.6.0",
+    "luxon": "^3.6.1",
     "multer": "^2.0.0",
     "node-ical": "^0.20.1",
+    "sharp": "^0.34.2",
     "webdav": "^5.8.0"
   },
   "type": "module"

@@ -927,3 +927,58 @@ $ git submodule status
 $ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
 system restart required
 
+####### 2025-06-12 20:04:03 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+Already up to date.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
+####### 2025-06-13 19:22:56 #######
+$ echo $PWD
+/var/www/harveytucker
+$ whoami
+www-data
+$ git pull
+From https://github.com/Harvelon365/Harvelon365.github.io
+   e291485..a66e660  master     -> origin/master
+Updating e291485..a66e660
+Fast-forward
+ sitemap.txt | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   deploy-log.txt
+	modified:   wallpaper-api/package-lock.json
+	modified:   wallpaper-api/package.json
+	modified:   wallpaper-api/server.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
